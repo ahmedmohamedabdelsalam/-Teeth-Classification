@@ -17,13 +17,13 @@ The Teeth Classification Project is an AI-driven solution designed to classify d
 ## Project Structure
 ```
 Teeth_Classification_Project/
-├── data/                # Directory for datasets (if not too large)
-├── notebooks/           # Jupyter notebooks
-├── scripts/             # Python scripts
-├── models/              # Saved models
-├── README.md            # Project documentation
-├── requirements.txt     # List of dependencies
-└── LICENSE              # License file
+├── data/               # Directory for datasets (if not too large)
+├── notebooks/          # Jupyter notebooks
+├── scripts/            # Python scripts
+├── models/             # Saved models
+├── README.md           # Project documentation
+├── requirements.txt    # List of dependencies
+└── LICENSE             # License file
 ```
 
 ## Installation
@@ -32,11 +32,14 @@ Clone the repository:
 git clone https://github.com/yourusername/teeth-classification.git
 cd teeth-classification
 ```
+
 Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
-Prepare the dataset: Ensure your dataset is organized in the `data/` directory with subdirectories for training, validation, and testing.
+
+Prepare the dataset:
+Ensure your dataset is organized in the `data/` directory with subdirectories for training, validation, and testing.
 
 ## Usage
 ### Train the model:
@@ -44,11 +47,13 @@ Run the training script to start training the model:
 ```bash
 python scripts/train_model.py
 ```
+
 ### Evaluate the model:
 Evaluate the model on the test dataset:
 ```bash
 python scripts/evaluate_model.py
 ```
+
 ### Visualize results:
 Use the provided notebooks to visualize training results and model performance.
 
