@@ -1,67 +1,62 @@
-# Teeth Classification Project
+# Teeth Classification from Scratch
 
-## Project Overview
-The Teeth Classification Project is an AI-driven solution designed to classify dental images into seven distinct categories. This project leverages deep learning techniques to enhance diagnostic precision in the healthcare industry, specifically in dental care. By accurately classifying teeth, this solution aims to improve patient outcomes and align with strategic goals in AI-driven healthcare solutions.
+## Overview
+This project implements a deep learning model for teeth classification using TensorFlow and Keras. The model is built from scratch and trained on a custom dataset.
 
-## Objectives
-- **Preprocessing**: Prepare dental images for analysis through normalization and augmentation to ensure optimal conditions for model training and evaluation.
-- **Visualization**: Visualize the distribution of classes to understand dataset balance and display images before and after augmentation to evaluate preprocessing effectiveness.
-- **Model Development**: Build a robust computer vision model using TensorFlow capable of accurately classifying teeth into predefined categories.
+## Project Repository
+GitHub Repository: [Teeth Classification](https://github.com/ahmedmohamedabdelsalam/-Teeth-Classification)
 
-## Features
-- **Data Augmentation**: Utilizes techniques such as rotation, zoom, and horizontal flipping to increase dataset diversity and improve model generalization.
-- **Transfer Learning**: Employs a pre-trained VGG16 model to leverage existing knowledge and enhance classification accuracy.
-- **Early Stopping**: Implements early stopping to prevent overfitting and optimize training efficiency.
-- **Performance Visualization**: Provides visual insights into training and validation accuracy and loss over time.
+## Dataset
+The dataset consists of images categorized into different classes. It is divided into three sets:
+- **Training Set**: Used to train the model
+- **Validation Set**: Used to validate performance during training
+- **Testing Set**: Used to evaluate final model performance
 
-## Project Structure
-```
-Teeth_Classification_Project/
-├── data/               # Directory for datasets (if not too large)
-├── notebooks/          # Jupyter notebooks
-├── scripts/            # Python scripts
-├── models/             # Saved models
-├── README.md           # Project documentation
-├── requirements.txt    # List of dependencies
-└── LICENSE             # License file
-```
+Dataset is stored in a ZIP file named `Teeth_Dataset.zip` and is extracted automatically when running the script.
 
-## Installation
-Clone the repository:
+## Model Architecture
+The deep learning model is a Convolutional Neural Network (CNN) built using Keras with the following layers:
+- **Convolutional Layers**: Extract spatial features from images
+- **Max Pooling Layers**: Reduce dimensionality and computation
+- **Batch Normalization**: Improve training stability
+- **Dropout Layers**: Prevent overfitting
+- **Dense Layers**: Perform final classification
+
+## Requirements
+To run this project, install the required dependencies:
 ```bash
-git clone https://github.com/yourusername/teeth-classification.git
-cd teeth-classification
+pip install tensorflow numpy matplotlib seaborn scikit-learn
 ```
 
-Install dependencies:
+## Training the Model
+Run the following command to train the model:
 ```bash
-pip install -r requirements.txt
+python train.py
 ```
+- The model is trained for **50 epochs** with an **Adam optimizer** and **categorical cross-entropy loss**.
+- The best model is saved as `best_model.h5` using ModelCheckpoint.
 
-Prepare the dataset:
-Ensure your dataset is organized in the `data/` directory with subdirectories for training, validation, and testing.
+## Evaluation & Results
+After training, the model is evaluated on the test set, generating:
+- **Accuracy & Loss Plots**
+- **Confusion Matrix**
+- **Classification Report**
 
-## Usage
-### Train the model:
-Run the training script to start training the model:
+Run the following command to evaluate the trained model:
 ```bash
-python scripts/train_model.py
+python evaluate.py
 ```
 
-### Evaluate the model:
-Evaluate the model on the test dataset:
-```bash
-python scripts/evaluate_model.py
-```
+## Model Performance
+The model achieves:
+- Competitive **accuracy** on test data
+- A well-balanced confusion matrix and classification report
 
-### Visualize results:
-Use the provided notebooks to visualize training results and model performance.
-
-## Contributing
-Contributions are welcome! Please read the contributing guidelines for more details.
+## Future Improvements
+- Implement data augmentation techniques
+- Experiment with different architectures (ResNet, VGG, etc.)
+- Optimize hyperparameters for better accuracy
 
 ## License
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is open-source under the MIT License.
 
-## Acknowledgments
-Thanks to the contributors and the open-source community for their valuable resources and support.
