@@ -18,11 +18,8 @@ RUN apt-get update && apt-get install -y \
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the application code
+# Copy the application code (includes models/ folder with .keras files)
 COPY . .
-
-# Ensure models directory exists
-RUN mkdir -p models
 
 # Expose the application port (7860 is required for Hugging Face Spaces)
 EXPOSE 7860
