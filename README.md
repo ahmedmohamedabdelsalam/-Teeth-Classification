@@ -1,3 +1,14 @@
+---
+title: Teeth Classification
+emoji: 🦷
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+app_port: 7860
+pinned: false
+license: mit
+---
+
 # Dental Imaging System
 
 Clinical software for intraoral scan classification. This system analyzes dental images to assist in identifying common clinical conditions.
