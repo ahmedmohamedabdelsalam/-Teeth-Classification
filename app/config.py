@@ -7,7 +7,7 @@ STATIC_DIR = os.path.join(BASE_DIR, "static")
 TEMPLATES_DIR = os.path.join(BASE_DIR, "templates")
 
 # Model Configuration
-MODEL_NAME = "teeth_model_compat.h5"
+MODEL_NAME = "teeth_weights.weights.h5"
 MODEL_PATH = os.path.join(MODELS_DIR, MODEL_NAME)
 
 # Inference Configuration
