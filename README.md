@@ -1,13 +1,4 @@
----
-title: Teeth Classification
-emoji: 🦷
-colorFrom: blue
-colorTo: indigo
-sdk: docker
-app_port: 7860
-pinned: false
-license: mit
----
+
 
 # Dental Imaging System
 
