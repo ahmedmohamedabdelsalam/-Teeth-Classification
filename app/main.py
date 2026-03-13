@@ -67,15 +67,19 @@ async def predict(file: UploadFile = File(...)):
 @app.get("/health")
 async def health_check():
     try:
+        # Version tag to verify deployment
+        VERSION = "weights_only_v1_0728" 
         model = model_loader.load_model()
         return {
             "status": "healthy",
+            "version": VERSION,
             "model_loaded": True,
             "model_input": str(model.input_shape)
         }
     except Exception as e:
         return {
             "status": "unhealthy",
+            "version": "weights_only_v1_0728",
             "error": str(e)
         }
 
